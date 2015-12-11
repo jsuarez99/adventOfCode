@@ -2,7 +2,7 @@ use strict;
 
 my $input = "1321131112";
 
-for(my $k = 0; $k < 40; $k++){
+for(my $k = 0; $k < 50; $k++){
     $input = &lookAndSay($input);
 }
 
@@ -10,7 +10,7 @@ print "Result: ".split(//,$input)."\n";
 
 sub lookAndSay(){
     my @digits = split(//,$_[0]);
-    my @output;
+    my $output;
     for(my $i = 0; $i < @digits;){
 	my $numTimes = 1;  
 	my $j = $i+1;      #counter to look ahead for the same digit
@@ -22,10 +22,10 @@ sub lookAndSay(){
 	}
 
 	#Push the number of occurances and the digit itself to the output
-	push(@output,($numTimes,$digits[$i]));
+	$output .= "$numTimes"."$digits[$i]";
 
 	#Set the $i counter to the next different digit in the string
 	$i = $j;
     }
-    return join('',@output);
+    return $output;
 }
