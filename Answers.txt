@@ -32,3 +32,5 @@ Answers
 
 11A: cqjxxyzz
 11B: cqkaabcc
+
+12A: 111754
