@@ -34,3 +34,4 @@ Answers
 11B: cqkaabcc
 
 12A: 111754
+12B: 65402
